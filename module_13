@@ -1,0 +1,11 @@
+number_of_tickets = int(input("Количество билетов: "))
+summ_number = 0
+for i_number in range(number_of_tickets):
+    age = int(input("Количество полных лет посетителя конференции: "))
+    if 18 <= age < 25:
+        summ_number += 990
+    elif 25 <= age:
+        summ_number += 1390
+if number_of_tickets > 3:
+    summ_number = summ_number - (summ_number * 10 // 100)
+print(f"Сумма к оплате {summ_number}")
